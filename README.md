@@ -1,79 +1,142 @@
-# ATM-Interface-Using-Flask-Frame-Work
+# ATM Interface using Flask
+
+A web-based ATM simulation built with **Python, Flask, SQLite, HTML, CSS and Jinja2**. The project demonstrates core web-application concepts including authentication, session-based workflows, database-backed transactions and server-side template rendering.
 
 ## Overview
-This project is an ATM interface built using the Flask framework. It allows users to perform basic banking operations such as balance inquiry, cash withdrawal, deposit, and transaction history tracking.
 
-## Features
-- User authentication (Login & Logout)
-- Check account balance
-- Deposit money
-- Withdraw money
-- View transaction history
-- Secure and session-based transactions
+The application simulates common ATM operations through a browser-based interface:
 
-## Technologies Used
-- Python (Flask)
-- HTML, CSS (for frontend)
-- SQLite (Database)
-- Jinja2 (Template rendering)
+- User login and logout
+- Balance inquiry
+- Cash deposits
+- Cash withdrawals
+- Transaction history
+- Session-based user workflows
 
-## Installation & Setup
+## Architecture
 
-1. **Clone the Repository**
-   ```sh
-   git clone https://github.com/yourusername/atm-interface-flask.git
-   cd atm-interface-flask
-   ```
+```text
+Browser
+   ↓
+Flask Routes
+   ↓
+Application Logic
+   ↓
+SQLite Database
+   ↓
+Transaction / Account Data
+```
 
-2. **Create a Virtual Environment**
-   ```sh
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+The repository documentation describes Flask routes for authentication, dashboard access, deposits, withdrawals, balance checks and transaction history. fileciteturn9file0
 
-3. **Install Dependencies**
-   ```sh
-   pip install -r requirements.txt
-   ```
+## Tech Stack
 
-4. **Set Up the Database**
-   ```sh
-   python setup_db.py
-   ```
-
-5. **Run the Application**
-   ```sh
-   python app.py
-   ```
-
-6. **Access the Application**
-   Open a web browser and visit `http://127.0.0.1:5000/`
+- Python
+- Flask
+- SQLite
+- Jinja2
+- HTML / CSS
 
 ## Project Structure
-```
-ATM-Interface-Flask/
-│-- app.py
-│-- setup_db.py
-│-- templates/
-│   │-- index.html
-│   │-- login.html
-│   │-- dashboard.html
-│-- static/
-│   │-- styles.css
-│-- models.py
-│-- requirements.txt
-│-- README.md
+
+```text
+ATM-Interface-using-Flask-Framework/
+├── app.py
+├── setup_db.py
+├── models.py
+├── requirements.txt
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   └── dashboard.html
+├── static/
+│   └── styles.css
+└── README.md
 ```
 
-## API Endpoints
-| Route            | Method | Description         |
-|-----------------|--------|---------------------|
-| `/`             | GET    | Home Page          |
-| `/login`        | GET/POST | User Login       |
-| `/logout`       | GET    | User Logout        |
-| `/dashboard`    | GET    | User Dashboard     |
-| `/deposit`      | POST   | Deposit Money      |
-| `/withdraw`     | POST   | Withdraw Money     |
-| `/balance`      | GET    | Check Balance      |
-| `/history`      | GET    | View Transactions  |
+> The structure above reflects the project's existing README documentation. fileciteturn9file0
 
+## Getting Started
+
+### 1. Clone
+
+```bash
+git clone https://github.com/Jaswanth170/ATM-Interface-using-Flask-Framework.git
+cd ATM-Interface-using-Flask-Framework
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+macOS / Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+Windows:
+
+```powershell
+.venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Initialize the database
+
+```bash
+python setup_db.py
+```
+
+### 5. Run the application
+
+```bash
+python app.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:5000/
+```
+
+## API Routes
+
+| Route | Method | Purpose |
+|---|---|---|
+| `/` | GET | Home page |
+| `/login` | GET/POST | User authentication |
+| `/logout` | GET | End session |
+| `/dashboard` | GET | Account dashboard |
+| `/deposit` | POST | Deposit funds |
+| `/withdraw` | POST | Withdraw funds |
+| `/balance` | GET | View balance |
+| `/history` | GET | View transaction history |
+
+These routes are documented by the repository's existing project specification. fileciteturn9file0
+
+## Security Note
+
+This is an educational ATM simulation and should **not** be treated as production banking software. A production financial application would require stronger controls such as secure password hashing, CSRF protection, authorization checks, transaction integrity, audit logging, secret management, rate limiting, secure cookie configuration and comprehensive security testing.
+
+## Future Improvements
+
+- Add automated tests for account and transaction flows.
+- Add stronger input validation and error handling.
+- Add CSRF protection and secure authentication practices.
+- Add database migrations.
+- Add Docker support.
+- Add CI checks with GitHub Actions.
+- Improve accessibility and responsive UI.
+
+## Author
+
+**Jaswanth ST**  
+GitHub: [@Jaswanth170](https://github.com/Jaswanth170)
